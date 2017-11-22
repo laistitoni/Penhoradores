@@ -1,12 +1,8 @@
 <?php
 include 'conn.php';
 //envia mensagem
-if (isset($_POST["botao1"])){
-	$email = $_POST['email'];
-	$mensagem = $_POST["mensagem"]; 
-        $inserir = "INSERT INTO mensagem(email, mensagem) VALUES('".$email."','".$mensagem."')";
-	$result = mysqli_query($conn1,$inserir);
-}
+       // $inserir = "INSERT INTO mensagem(email, mensagem) VALUES('".$email."','".$mensagem."')";
+	//$result = mysqli_query($conn1,$inserir);
 
 //cadastra usuário
 if (isset($_POST["botao2"])){
@@ -27,9 +23,29 @@ $resultx = mysqli_query($conn1,$x);
 $y ="SELECT * FROM usuario WHERE senha = '$senha1'";
 $resulty = mysqli_query($conn1,$y);
 if((mysqli_num_rows($resultx) > 0) && (mysqli_num_rows($resulty) > 0)){    
-echo "uhul ce entrou";
+    include 'envie.php';
 }}
 
+if (isset($_POST["botao1"])){
+$destinatario = "laisclesar@gmail.com";
+$assunto = "fale conosco";
+$email = $_POST['email'];
+$mensagem = $_POST['mensagem'];
+
+ // monta o e-mail na variavel $body
+$body = "===================================" . "\n";
+$body = $body . "FALE CONOSCO - TESTE COMPROVATIVO" . "\n";
+$body = $body . "===================================" . "\n\n";
+$body = $body . "Email: " . $email . "\n";
+$body = $body . "Mensagem: " . $mensagem . "\n\n";
+$body = $body . "===================================" . "\n";
+
+// envia o email
+mail($destinatario, $assunto , $body, "From: $email\r\n");
+
+echo 'agradecemos sua mensagem';
+
+}
 
 ?>
 
