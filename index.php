@@ -33,19 +33,17 @@
    <nav class="nav navbar-right navbar-fixed-bottom">
   <div class="container">
      
-      <form  action='entrar.php' method='POST'> 
+      <form  action='formulário.php' method='POST'> 
            <h4> fale conosco:</h4>
-      <input type='email' value="Email" name='emial'> <br>
+      <input type='email' value="Email" name='email'> <br>
       <input type='text'value="Mensagem" name='mensagem'> <br>
-      <input type='submit' value='Enviar' name='botao'>
+      <input type='submit' value='Enviar' name='botao1'>
       </form> 
-      
-      <h6 class="x">Desenvolvido por: Laís, Guilherme Gomes e Guilherme Kraemer </h6>
       <div class="btn-group">
       <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2http://localhost/penhoradores-master/index.php"><img title="COMPARTILHAR" src="facebook.png"></a>
       <a href="https://www.twitter.com/sharer/sharer.php?u=http%3A%2F%2http://localhost/penhoradores-master/index.php"><img title="COMPARTILHAR" src="twitter.png"></a>
       </div>
-
+     <h6 class="x">Desenvolvido por: Laís, Guilherme Gomes e Guilherme Kraemer </h6>
   </div>
 </nav>
     
