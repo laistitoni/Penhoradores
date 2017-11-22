@@ -33,7 +33,7 @@
    <nav class="nav navbar-right navbar-fixed-bottom">
   <div class="container">
      
-      <form  action='formulário.php' method='POST'> 
+      <form  action='formulario.php' method='POST'> 
            <h4> fale conosco:</h4>
       <input type='email' value="Email" name='email'> <br>
       <input type='text'value="Mensagem" name='mensagem'> <br>

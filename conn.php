@@ -21,7 +21,9 @@ $sql = "CREATE DATABASE IF NOT EXISTS banco_penhoradores";
 mysqli_close($conn);
 
 $conn1 = mysqli_connect($servername, $username, $password, $dbname);
+
 $sql1 = "CREATE TABLE IF NOT EXISTS usuario (
+        email VARCHAR (40) NOT NULL,
   	nome VARCHAR (30) NOT NULL,
         senha VARCHAR(32) NOT NULL)";
   	if (mysqli_query($conn1, $sql1)) {
@@ -36,4 +38,5 @@ mensagem VARCHAR(500) NOT NULL)";
     }else {
       echo "Error na criação da tabela: ".mysqli_error($conn1);
     }
+
 ?>

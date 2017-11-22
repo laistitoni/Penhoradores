@@ -38,14 +38,14 @@ include 'conn.php';
   Name:<input type="text" class="form-control" name="nome1"> 
   Password:<input type="password" class="form-control"  name="senha1">   
 </div>
-        <input type="submit" class="form-control" value="Entrarar" name="botao3">
+        <input type="submit" class="form-control" value="Entrar" name="botao3">
         </form>  
     
     <nav class="nav navbar-right navbar-fixed-bottom">
   <div class="container">
-           <form  action='formulário.php' method='POST'> 
+      <form  action='formulario.php' method='POST'> 
            <h4> fale conosco:</h4>
-      <input type='email' value="Email" name='emial'> <br>
+      <input type='email' value="Email" name='email'> <br>
       <input type='text'value="Mensagem" name='mensagem'> <br>
       <input type='submit' value='Enviar' name='botao1'>
       </form> 
