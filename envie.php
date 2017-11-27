@@ -1,33 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<?php
+include 'conn.php';
+?>
+<html lang="pt-br">
+    
 <head>
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="css1.css">
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
+    <div class="cabeçalho">
+   <h1>Penhoradores de Texto</h1> 
+   </div>
+<ul class="menu">
+        <li><a href="index.php">Inicio</a></li> |
+        <li><a href="envie.php">Envie seu texto</a></li> |
+        <li><a href="entrar.php">Login</a></li>
     </ul>
-  </div>
-</nav>
-  
-<div class="container">
-  <h3>Inverted Navbar</h3>
-  <p>An inverted navbar is black instead of gray.</p>
+    
+    <div class="corpo"> 
+        <span>
+   
+        <div id="c1" class="coluna">
+ 
+          </div>
+        <div id="c1" class="coluna">
+ <div id="compartilhe">
+<h2>Compartilhe seu texto conosco</h2>
+<hr><br>
+<form action="formulario.php" method="POST">
+<input type="text" name="titulo" style="width:50%" autofocus placeholder="Título.."><br><br>
+<input type="text" name="autor" style="width:50%" autofocus placeholder="Autor.."><br><br>
+<textarea name="texto" autofocus placeholder="Texto.."></textarea><br><br>
+<input type='submit' value='Enviar' name='enviar'>
+<input type='submit' value='Vizualizar' name='vizualizar'>
+</form>
 </div>
-
+  </div>
+       </span>
+ 
+   </div>
+  <div class="rodape">
+      <form  action='formulario.php' method='POST'> 
+      <h4> fale conosco:</h4>
+      <input type='email' value="Email" name='email'> <br>
+      <input type='text'value="Mensagem" name='mensagem'> <br>
+      <input type='submit' value='Enviar' name='botao1'>
+      </form> 
+      <div class="btn-group">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2http://localhost/penhoradores-master/index.php"><img title="COMPARTILHAR" src="facebook.png"></a>
+      <a href="https://www.twitter.com/sharer/sharer.php?u=http%3A%2F%2http://localhost/penhoradores-master/index.php"><img title="COMPARTILHAR" src="twitter.png"></a>
+      </div>
+     <h6 class="x">Desenvolvido por: Laís, Guilherme Gomes e Guilherme Kraemer </h6>
+  </div>
 </body>
 </html>

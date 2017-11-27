@@ -38,5 +38,13 @@ mensagem VARCHAR(500) NOT NULL)";
     }else {
       echo "Error na criação da tabela: ".mysqli_error($conn1);
     }
+    $sql3 = "CREATE TABLE IF NOT EXISTS texto (
+autor VARCHAR(50) NOT NULL,
+titulo TEXT NOT NULL,
+texto TEXT NOT NULL)";
+    if (mysqli_query($conn1, $sql3)) {
+    }else {
+      echo "Error na criação da tabela: ".mysqli_error($conn1);
+    }
 
 ?>

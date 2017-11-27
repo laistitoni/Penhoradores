@@ -11,14 +11,14 @@ $nome = $_POST['nome'];
 $senha = md5($_POST["senha"]); 
 $inserir1 = "INSERT INTO usuario(email, nome, senha) VALUES('".$email."','".$nome."','".$senha."')";
 $result1 = mysqli_query($conn1, $inserir1);
-        
+include 'entrar1.php';
 }
 
 //verifica cadastro
 if (isset($_POST["botao3"]) ){
-$nome1 = $_POST['nome1'];
+$email1 = $_POST['email3'];
 $senha1 = md5($_POST["senha1"]);
-$x ="SELECT * FROM usuario WHERE Nome = '$nome1'";
+$x ="SELECT * FROM usuario WHERE email = '$email1'";
 $resultx = mysqli_query($conn1,$x);
 $y ="SELECT * FROM usuario WHERE senha = '$senha1'";
 $resulty = mysqli_query($conn1,$y);
@@ -46,6 +46,12 @@ mail($destinatario, $assunto , $body, "From: $email\r\n");
 echo 'agradecemos sua mensagem';
 
 }
-
+if (isset($_POST["enviar"]) ){
+$autor = $_POST['autor'];
+$titulo = $_POST["titulo"];
+$texto = $_POST['texto'];
+$x = "INSERT INTO texto(autor, titulo, texto) VALUES('".$autor."','".$titulo."','".$texto."')";
+$resultx = mysqli_query($conn1,$x);
+}
 ?>
 
