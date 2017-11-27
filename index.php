@@ -25,7 +25,7 @@
  <div class="corpo">
      <span>
          <div id="c1" class="coluna">
-         <h1>Cadê você?</h1>
+          <h1>Cadê você?</h1>
 Cadê você aqui na minha cama ?
 Cadê você para me dar segurança ?
 Não está longe, não está perto
@@ -50,7 +50,32 @@ Seguro, solitário ou mesmo ninguém
 Não sei o que poderia acontecer
 Se eu não tivesse você
  </div>
-         <div id="c2" class="coluna"></div></span>
+         <div id="c2" class="coluna">
+                    <h1>Cadê você?</h1>
+Cadê você aqui na minha cama ?
+Cadê você para me dar segurança ?
+Não está longe, não está perto
+Distante como as areias do deserto
+
+O espaço não se pode medir
+No tempo não se pode interferir
+Não importa a distância e nem o tempo
+Você me completa em todos os momentos
+
+Por vezes, me sinto sem nada
+Uma sensação que me cala
+Depois disso acontecer
+Eu tento aprender
+
+Solitário, eu e meus pensamentos
+Me trazem os meus sentimentos
+Tudo o que eu faço ou tudo que faria
+Só tem um motivo, a sua alegria
+
+Seguro, solitário ou mesmo ninguém
+Não sei o que poderia acontecer
+Se eu não tivesse você
+         </div></span>
  </div>
  
  
