@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <?php
 include 'conn.php';
+    if($_SESSION["usuarioLogado"] != 1){
+
+    echo "Usuário não está logado. Direcionando para a página de login.";
+    header('Location: http://localhost/penhoradores-master/entrar.php');
+
+}
 ?>
 <html lang="pt-br">
     
@@ -15,6 +21,7 @@ include 'conn.php';
  <link rel="stylesheet" type="text/css" href="css1.css">
 </head>
 <body>
+
     <div class="cabeçalho">
    <h1>Penhoradores de Texto</h1> 
    </div>

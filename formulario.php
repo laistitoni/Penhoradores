@@ -22,7 +22,8 @@ $x ="SELECT * FROM usuario WHERE email = '$emaile'";
 $resultx = mysqli_query($conn1,$x);
 $y ="SELECT * FROM usuario WHERE senha = '$senhae'";
 $resulty = mysqli_query($conn1,$y);
-if((mysqli_num_rows($resultx) > 0) && (mysqli_num_rows($resulty) > 0)){    
+if((mysqli_num_rows($resultx) > 0) && (mysqli_num_rows($resulty) > 0)){  
+    session_register("MeuSite"); $_SESSION["usuarioLogado"] = 1;
     include 'envie.php';
 }
 
