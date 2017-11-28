@@ -33,7 +33,7 @@ include 'conn.php';
           </div>
         <div id="c2" class="coluna">
   <form action='formulario.php' method='POST'>
-  Email: <input type="email" name="email3"> <br>
+  Email: <input type="email" name="email2"> <br>
   Senha: <input type="password"  name="senha1">   <br>
 <input type="submit"  value="Entrar" name="botao3">
         </form>  
