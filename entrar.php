@@ -30,17 +30,25 @@ include 'conn.php';
    
         <div id="c1" class="coluna">
  <form action='formulario.php' method='POST' >
-  Email: <input type="email" name="email1"> <br>
-  Nome: <input type="text"  name="nome"> <br>
-  Senha: <input type="password" name="senha">  <br> 
-  <input type="submit" value="Cadastrar" name="botao2">
+  Email: <input type="email" name="email-cadastro"> <br>
+  Nome: <input type="text"  name="nome-cadastro"> <br>
+  Senha: <input type="password" name="senha-cadastro">  <br> 
+  <input type="submit" value="Cadastrar" name="botao-cadastro">
          </form>  
           </div>
         <div id="c2" class="coluna">
   <form action='formulario.php' method='POST'>
-  Email: <input type="email" name="email2"> <br>
-  Senha: <input type="password"  name="senha1">   <br>
-<input type="submit"  value="Entrar" name="botao3">
+  Email: <input type="email" name="email-entrar"> <br>
+  Senha: <input type="password"  name="senha-entrar">   <br>
+<input type="submit"  value="Entrar" name="botao-entrar">
+        </form> 
+     <br>
+     <br> 
+    <h4>Área do administrador</h4>
+ <form action='formulario.php' method='POST'>
+  Email: <input type="email" name="email-adm"> <br>
+  Senha: <input type="password"  name="senha-adm">   <br>
+<input type="submit"  value="Entrar" name="botao-adm">
         </form>  
   </div>
        </span>
@@ -49,13 +57,13 @@ include 'conn.php';
   <div class="rodape">
       <form  action='formulario.php' method='POST'> 
       <h4> fale conosco:</h4>
-      <input type='email' value="Email" name='email'> <br>
-      <input type='text'value="Mensagem" name='mensagem'> <br>
-      <input type='submit' value='Enviar' name='botao1'>
+      <input type='email' value="Email" name='email-contato'> <br> 
+      <input type='text'value="Mensagem" name='mensagem-contato'> <br>
+      <input type='submit' value='Enviar' name='botao-contato'>
       </form> 
       <div class="btn-group">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2http://localhost/penhoradores-master/index.php"><img title="COMPARTILHAR" src="facebook.png"></a>
-      <a href="https://www.twitter.com/sharer/sharer.php?u=http%3A%2F%2http://localhost/penhoradores-master/index.php"><img title="COMPARTILHAR" src="twitter.png"></a>
+      <a href="https://www.facebook.com"><img title="COMPARTILHAR" src="facebook.png"></a>
+      <a href="https://www.twitter.com"><img title="COMPARTILHAR" src="twitter.png"></a>
       </div>
      <h6 class="x">Desenvolvido por: Laís, Guilherme Gomes e Guilherme Kraemer </h6>
   </div>

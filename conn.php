@@ -30,11 +30,7 @@ $sql1 = "CREATE TABLE IF NOT EXISTS usuario (
   	}else {
   		echo "Error na criação da tabela: ".mysqli_error($conn1);
   	}
-$sql4 ='INSERT INTO usuario(email, nome, senha)IF NOT EXISTS VALUES("leo@gmail.com", "leonardo", "leo123"),("marcelo@gmail.com", "marcelo", "marcelo123"),("airton@gmail.com", "airton", "airton123")';      
-if (mysqli_query($conn1, $sql4)) {
-  	}else {
-  		echo "Error na criação da tabela: ".mysqli_error($conn1);
-  	}
+
 $sql2 = "CREATE TABLE IF NOT EXISTS mensagem (
 email VARCHAR(50) NOT NULL,
 mensagem VARCHAR(500) NOT NULL)";
@@ -42,7 +38,8 @@ mensagem VARCHAR(500) NOT NULL)";
     }else {
       echo "Error na criação da tabela: ".mysqli_error($conn1);
     }
-    $sql3 = "CREATE TABLE IF NOT EXISTS texto (
+    
+$sql3 = "CREATE TABLE IF NOT EXISTS texto (
 autor VARCHAR(50) NOT NULL,
 titulo TEXT NOT NULL,
 texto TEXT NOT NULL)";
@@ -50,5 +47,6 @@ texto TEXT NOT NULL)";
     }else {
       echo "Error na criação da tabela: ".mysqli_error($conn1);
     }
+    
 
 ?>
