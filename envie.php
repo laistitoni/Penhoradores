@@ -28,7 +28,7 @@ include 'conn.php';
 <ul class="menu">
         <li><a href="index.php">Inicio</a></li> |
         <li><a href="envie.php">Envie seu texto</a></li> |
-        <li><a href="entrar.php">Login</a></li>
+        <li><a href="entrar.php">Entrar</a></li>
     </ul>
     
     <div class="corpo"> 
@@ -46,7 +46,7 @@ include 'conn.php';
 <input type="text" name="autor" style="width:50%" autofocus placeholder="Autor.."><br><br>
 <textarea name="texto" autofocus placeholder="Texto.."></textarea><br><br>
 <input type='submit' value='Enviar' name='enviar'>
-<input type='submit' value='Vizualizar' name='vizualizar'>
+<input type='submit' value='Vizualizar' name='visualizar'>
 </form>
 </div>
   </div>

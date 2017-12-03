@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <?php
 include 'conn.php';
+if (isset($_POST["visualizar"]) ){
+$autor = $_POST['autor'];
+$titulo = $_POST["titulo"];
+$texto = $_POST['texto'];
+}
 ?>
 <html lang="pt-br">
 <head>
@@ -30,30 +35,8 @@ include 'conn.php';
          <div id="c1" class="coluna">
              <h2> Textos da semana</h2>
              <hr>
-          <h4>Cadê você?</h4>
-Cadê você aqui na minha cama ?
-Cadê você para me dar segurança ?
-Não está longe, não está perto
-Distante como as areias do deserto
-
-O espaço não se pode medir
-No tempo não se pode interferir
-Não importa a distância e nem o tempo
-Você me completa em todos os momentos
-
-Por vezes, me sinto sem nada
-Uma sensação que me cala
-Depois disso acontecer
-Eu tento aprender
-
-Solitário, eu e meus pensamentos
-Me trazem os meus sentimentos
-Tudo o que eu faço ou tudo que faria
-Só tem um motivo, a sua alegria
-
-Seguro, solitário ou mesmo ninguém
-Não sei o que poderia acontecer
-Se eu não tivesse você
+             <h4><?php echo $titulo;?></h4>
+<?php echo $texto;?>ss
  </div>
          <div id="c2" class="coluna">
               <h2> Textos mais curtidos</h2>
@@ -103,3 +86,5 @@ Se eu não tivesse você
   </div>
 </body>
 </html>
+
+
