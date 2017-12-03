@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
+session_start();
 include 'conn.php';
-    if($_SESSION["usuarioLogado"] != 1){
+    if($_SESSION['Logado'] != 1){
 
     echo "Usuário não está logado. Direcionando para a página de login.";
     header('Location: http://localhost/penhoradores-master/entrar.php');
-
 }
 ?>
 <html lang="pt-br">

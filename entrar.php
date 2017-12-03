@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 include 'conn.php';
 ?>
 <html lang="pt-br">

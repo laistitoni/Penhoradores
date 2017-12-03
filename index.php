@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include 'conn.php';
+?>
 <html lang="pt-br">
 <head>
   <title>Penhoradores</title>

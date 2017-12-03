@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 include 'conn.php';
 ?>
 <html lang="pt-br">
@@ -33,9 +34,9 @@ include 'conn.php';
           </div>
         <div id="c2" class="coluna">
   <form action='formulario.php' method='POST'>
-  Email: <input type="email" name="email2"> <br>
-  Senha: <input type="password"  name="senha1">   <br>
-<input type="submit"  value="Entrar" name="botao3">
+  Email: <input type="email" name="email-entrar"> <br>
+  Senha: <input type="password"  name="senha-entrar">   <br>
+<input type="submit"  value="Entrar" name="botao-entrar">
         </form>  
   </div>
        </span>

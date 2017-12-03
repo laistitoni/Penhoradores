@@ -54,8 +54,16 @@ while($sql = mysqli_fetch_array($query)){
 $titulo=$sql["titulo"];
 $autor = $sql["autor"];
 $texto = $sql["texto"];
-echo "<br>$autor <br>$titulo <br> $texto <br>"; 
+echo "<br>$autor <br>$titulo <br> $texto <br> 
+<form  action='formulario.php' method='POST'> 
+      <br>
+    <INPUT TYPE='checkbox' NAME='check'> 
+      </form> ";
 }
+echo "<form  action='formulario.php' method='POST'> 
+      <br>
+    <INPUT TYPE='submit' NAME='botao-add' value='adcionar'> 
+      </form> ";
 ?> 
         </div>
        </span>
