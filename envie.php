@@ -4,8 +4,8 @@ session_start();
 include 'conn.php';
     if($_SESSION['Logado'] != 1){
 
-    echo "Usuário não está logado. Direcionando para a página de login.";
-    header('Location: http://localhost/penhoradores-master/entrar.php');
+    echo "<script>alert('Efetue login para enviar seu texto');</script>";
+    header('Location: entrar.php');
 }
 ?>
 <html lang="pt-br">
@@ -41,13 +41,15 @@ include 'conn.php';
  <div id="compartilhe">
 <h2>Compartilhe seu texto conosco</h2>
 <hr><br>
-<form action="formulario.php" method="POST">
+<form action="visualizar.php" method="POST">
 <input type="text" name="titulo" style="width:50%" autofocus placeholder="Título.."><br><br>
 <input type="text" name="autor" style="width:50%" autofocus placeholder="Autor.."><br><br>
 <textarea name="texto" autofocus placeholder="Texto.."></textarea><br><br>
 <input type='submit' value='Enviar' name='enviar'>
-<input type='submit' value='Vizualizar' name='visualizar'>
+<input type='submit' value='Visualizar' name='visualizar'>
 </form>
+
+
 </div>
   </div>
        </span>

@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <?php
 include 'conn.php';
-if (isset($_POST["visualizar"]) ){
+//pega texto
+if (isset($_POST["enviar"]) ){
 $autor = $_POST['autor'];
 $titulo = $_POST["titulo"];
 $texto = $_POST['texto'];
+$x = "INSERT INTO texto(autor, titulo, texto) VALUES('".$autor."','".$titulo."','".$texto."')";
+$resultx = mysqli_query($conn1,$x);
+echo "<script>alert('Agradecemos sua colaboração');</script>";
+header('Location: index.php'); 
+}
+
+if (isset($_POST["visualizar"]) ){
+$autor1 = $_POST['autor'];
+$titulo1 = $_POST["titulo"];
+$texto1 = $_POST['texto'];
 }
 ?>
 <html lang="pt-br">
@@ -35,8 +46,8 @@ $texto = $_POST['texto'];
          <div id="c1" class="coluna">
              <h2> Textos da semana</h2>
              <hr>
-             <h4><?php echo $titulo;?></h4>
-<?php echo $texto;?>ss
+             <h4><?php echo $titulo1;?></h4>
+<?php echo "$texto1<br>";?>
  </div>
          <div id="c2" class="coluna">
               <h2> Textos mais curtidos</h2>

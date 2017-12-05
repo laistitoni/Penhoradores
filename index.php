@@ -28,60 +28,72 @@ include 'conn.php';
  <div class="corpo">
      <span>
          <div id="c1" class="coluna">
-             <h2> Textos da semana</h2>
-             <hr>
-          <h4>Cadê você?</h4>
-Cadê você aqui na minha cama ?
-Cadê você para me dar segurança ?
-Não está longe, não está perto
-Distante como as areias do deserto
+             
+             <?php
+             $results_per_page = 3;
+if(isset($_GET["page"])){
+   $page=$_GET["page"];
+ }else{
+   $page=1;
+}
 
-O espaço não se pode medir
-No tempo não se pode interferir
-Não importa a distância e nem o tempo
-Você me completa em todos os momentos
+$start_from =($page-1) * $results_per_page;
+$sql4="SELECT * FROM banco_penhoradores.texto LIMIT $start_from, $results_per_page";
+$rs_result = mysqli_query($conn1, $sql4);
+echo '<h2> Textos da semana</h2> 
+    <hr>';
+while($row = mysqli_fetch_array($rs_result, MYSQLI_NUM)){
+				echo "
+                                    
+          <h4>$row[1]</h4>
+         $row[2]<br><br>
+             $row[0]<br><br>";}
+$sql5 = "SELECT COUNT(autor) AS total FROM texto";
+$result2= mysqli_query($conn1, $sql5);
+$row = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+$total_pages = ceil($row["total"]/$results_per_page);
+for($i=1; $i<=$total_pages;$i++){
+	echo "<a href= 'index.php?page=".$i."' style='text-decoration: none;'>  ".$i."</a>";
+}
+mysqli_free_result($rs_result);
+mysqli_close($conn1);
 
-Por vezes, me sinto sem nada
-Uma sensação que me cala
-Depois disso acontecer
-Eu tento aprender
+             ?>         
 
-Solitário, eu e meus pensamentos
-Me trazem os meus sentimentos
-Tudo o que eu faço ou tudo que faria
-Só tem um motivo, a sua alegria
-
-Seguro, solitário ou mesmo ninguém
-Não sei o que poderia acontecer
-Se eu não tivesse você
  </div>
          <div id="c2" class="coluna">
               <h2> Textos mais curtidos</h2>
                <hr>
-                    <h4>Cadê você?</h4>
-Cadê você aqui na minha cama ?
-Cadê você para me dar segurança ?
-Não está longe, não está perto
-Distante como as areias do deserto
+                               <?php
+             $results_per_page = 3;
+if(isset($_GET["page"])){
+   $page=$_GET["page"];
+ }else{
+   $page=1;
+}
 
-O espaço não se pode medir
-No tempo não se pode interferir
-Não importa a distância e nem o tempo
-Você me completa em todos os momentos
+$start_from =($page-1) * $results_per_page;
+$sql4="SELECT * FROM banco_penhoradores.texto LIMIT $start_from, $results_per_page";
+$rs_result = mysqli_query($conn1, $sql4);
+echo '<h2> Textos da semana</h2> 
+    <hr>';
+while($row = mysqli_fetch_array($rs_result, MYSQLI_NUM)){
+				echo "
+                                    
+          <h4>$row[1]</h4>
+         $row[2]<br><br>
+             $row[0]<br><br>";}
+$sql5 = "SELECT COUNT(autor) AS total FROM texto";
+$result2= mysqli_query($conn1, $sql5);
+$row = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+$total_pages = ceil($row["total"]/$results_per_page);
+for($i=1; $i<=$total_pages;$i++){
+	echo "<a href= 'index.php?page=".$i."' style='text-decoration: none;'>  ".$i."</a>";
+}
+mysqli_free_result($rs_result);
+mysqli_close($conn1);
 
-Por vezes, me sinto sem nada
-Uma sensação que me cala
-Depois disso acontecer
-Eu tento aprender
-
-Solitário, eu e meus pensamentos
-Me trazem os meus sentimentos
-Tudo o que eu faço ou tudo que faria
-Só tem um motivo, a sua alegria
-
-Seguro, solitário ou mesmo ninguém
-Não sei o que poderia acontecer
-Se eu não tivesse você
+             ?>   
          </div></span>
  </div>
  
