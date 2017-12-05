@@ -43,7 +43,15 @@ echo "<script>alert('Agradecemos sua mensagem');</script>";
 header('Location: index.php');
 
 }
-
+//insere selecionados
+if (isset($_POST["botao-add"])){
+    
+    
+    
+$inserirc = "INSERT INTO usuario(email, nome, senha) VALUES('".$emailc."','".$nomec."','".$senhac."')";
+$resultc = mysqli_query($conn1, $inserirc);
+header('Location: entrar1.php');
+}
 
 ?>
 

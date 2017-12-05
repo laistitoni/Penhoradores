@@ -46,26 +46,19 @@ echo "<br>$email <br> $nome <br>";
         <div id="c2" class="coluna">
             <h4> Textos </h4>
             <hr>
-             <?php
+<?php
+$var = "SELECT * FROM texto_enviado";
+$var2 = mysqli_query($conn1, $var);
+echo "<form  action='formulario.php' method='POST'>";
+while($var = mysqli_fetch_array($var2)){
+$autor = $var["autor"];
+$titulo = $var["titulo"];
+$texto= $var["texto"];
 
-$sql = "SELECT * FROM texto_enviado";
-$query = mysqli_query($conn1,$sql);
-while($sql = mysqli_fetch_array($query)){
-$titulo=$sql["titulo"];
-$autor = $sql["autor"];
-$texto = $sql["texto"];
-echo "<br>$autor <br>$titulo <br> $texto <br> 
-<form  action='formulario.php' method='POST'> 
-      <br>
-    <INPUT TYPE='checkbox' NAME='check'> 
-      </form> ";
+echo "<br>$autor <br> $titulo <br>$texto<br>"; 
 }
-echo "<form  action='formulario.php' method='POST'> 
-      <br>
-    <INPUT TYPE='submit' NAME='botao-add' value='adcionar'> 
-      </form> ";
 ?> 
-        </div>
+       </div>
        </span>
  
    
