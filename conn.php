@@ -47,6 +47,4 @@ texto TEXT NOT NULL)";
     }else {
       echo "Error na criação da tabela: ".mysqli_error($conn1);
     }
-    
-
 ?>

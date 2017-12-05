@@ -73,17 +73,16 @@ if(isset($_GET["page"])){
 }
 
 $start_from =($page-1) * $results_per_page;
-$sql4="SELECT * FROM banco_penhoradores.texto LIMIT $start_from, $results_per_page";
+$sql4="SELECT * FROM banco_penhoradores.mensagem LIMIT $start_from, $results_per_page";
 $rs_result = mysqli_query($conn1, $sql4);
-echo '<h2> Textos da semana</h2> 
+echo '<h2>Mensagens dos colaboradores</h2> 
     <hr>';
 while($row = mysqli_fetch_array($rs_result, MYSQLI_NUM)){
 				echo "
                                     
-          <h4>$row[1]</h4>
-         $row[2]<br><br>
-             $row[0]<br><br>";}
-$sql5 = "SELECT COUNT(autor) AS total FROM texto";
+          
+         $row[1]<br><br>";
+$sql5 = "SELECT COUNT(email) AS total FROM mensagem";
 $result2= mysqli_query($conn1, $sql5);
 $row = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 $total_pages = ceil($row["total"]/$results_per_page);
