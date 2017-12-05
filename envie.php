@@ -3,7 +3,6 @@
 session_start();
 include 'conn.php';
     if($_SESSION['Logado'] != 1){
-
     echo "<script>alert('Efetue login para enviar seu texto');</script>";
     header('Location: entrar.php');
 }

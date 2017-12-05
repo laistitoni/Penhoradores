@@ -2,17 +2,6 @@
 <!DOCTYPE html>
 <?php
 include 'conn.php';
-$results_per_page = 10;
-
-if(isset($_GET["page"])){
-   $page=$_GET["page"];
- }else{
-   $page=1;
-}
-
-$start_from =($page-1) * $results_per_page;
-$sql4="SELECT * FROM banco.produto LIMIT $start_from, $results_per_page";
-$rs_result = mysqli_query($conn1, $sql4);
 ?>
 <html lang="pt-br">
     
@@ -59,7 +48,7 @@ echo "<br>$email <br> $nome <br>";
             <hr>
              <?php
 
-$sql = "SELECT * FROM texto";
+$sql = "SELECT * FROM texto_enviado";
 $query = mysqli_query($conn1,$sql);
 while($sql = mysqli_fetch_array($query)){
 $titulo=$sql["titulo"];

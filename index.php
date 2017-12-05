@@ -62,37 +62,7 @@ mysqli_close($conn1);
 
  </div>
          <div id="c2" class="coluna">
-              <h2> Textos mais curtidos</h2>
-               <hr>
-                               <?php
-             $results_per_page = 3;
-if(isset($_GET["page"])){
-   $page=$_GET["page"];
- }else{
-   $page=1;
-}
-
-$start_from =($page-1) * $results_per_page;
-$sql4="SELECT * FROM banco_penhoradores.mensagem LIMIT $start_from, $results_per_page";
-$rs_result = mysqli_query($conn1, $sql4);
-echo '<h2>Mensagens dos colaboradores</h2> 
-    <hr>';
-while($row = mysqli_fetch_array($rs_result, MYSQLI_NUM)){
-				echo "
-                                    
-          
-         $row[1]<br><br>";
-$sql5 = "SELECT COUNT(email) AS total FROM mensagem";
-$result2= mysqli_query($conn1, $sql5);
-$row = mysqli_fetch_array($result2, MYSQLI_ASSOC);
-$total_pages = ceil($row["total"]/$results_per_page);
-for($i=1; $i<=$total_pages;$i++){
-	echo "<a href= 'index.php?page=".$i."' style='text-decoration: none;'>  ".$i."</a>";
-}
-mysqli_free_result($rs_result);
-mysqli_close($conn1);
-
-             ?>   
+       
          </div></span>
  </div>
  

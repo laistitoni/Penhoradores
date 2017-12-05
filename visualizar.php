@@ -6,7 +6,7 @@ if (isset($_POST["enviar"]) ){
 $autor = $_POST['autor'];
 $titulo = $_POST["titulo"];
 $texto = $_POST['texto'];
-$x = "INSERT INTO texto(autor, titulo, texto) VALUES('".$autor."','".$titulo."','".$texto."')";
+$x = "INSERT INTO texto_enviado(autor, titulo, texto) VALUES('".$autor."','".$titulo."','".$texto."')";
 $resultx = mysqli_query($conn1,$x);
 echo "<script>alert('Agradecemos sua colaboração');</script>";
 header('Location: index.php'); 
