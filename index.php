@@ -62,7 +62,7 @@ mysqli_close($conn1);
 
  </div>
          <div id="c2" class="coluna">
-      
+              
          </div></span>
  </div>
  

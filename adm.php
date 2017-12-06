@@ -16,14 +16,14 @@ include 'conn.php';
  <link rel="stylesheet" type="text/css" href="css1.css">
 </head>
 <body>
-    <div class="cabeçalho">
+    <div class="cabeÃ§alho">
     
    <h1>Penhoradores de Texto</h1> 
    </div>
 <ul class="menu">
         <li><a href="index.php">Inicio</a></li> |
-        <li><a href="envie.php">Envie seu texto</a></li> |
-        <li><a href="entrar.php">Entrar</a></li>
+        <li><a href="textos.php">Texto</a></li> |
+        <li><a href="mensagem.php">Mensagem</a></li>
     </ul>
     
     <div class="corpo"> 
@@ -49,14 +49,14 @@ echo "<br>$email <br> $nome <br>";
 <?php
 $var = "SELECT * FROM texto_enviado";
 $var2 = mysqli_query($conn1, $var);
-echo "<form  action='formulario.php' method='POST'>";
+
 while($var = mysqli_fetch_array($var2)){
 $autor = $var["autor"];
 $titulo = $var["titulo"];
 $texto= $var["texto"];
-
 echo "<br>$autor <br> $titulo <br>$texto<br>"; 
 }
+
 ?> 
        </div>
        </span>
@@ -74,7 +74,7 @@ echo "<br>$autor <br> $titulo <br>$texto<br>";
       <a href="https://www.facebook.com"><img title="COMPARTILHAR" src="facebook.png"></a>
       <a href="https://www.twitter.com"><img title="COMPARTILHAR" src="twitter.png"></a>
       </div>
-     <h6 class="x">Desenvolvido por: Laís, Guilherme Gomes e Guilherme Kraemer </h6>
+     <h6 class="x">Desenvolvido por: LaÃ­s, Guilherme Gomes e Guilherme Kraemer </h6>
   </div>
 </body>
 </html>
