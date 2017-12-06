@@ -35,8 +35,8 @@ include 'conn.php';
 </div>
 <ul class="menu">
         <li><a href="index.php">Inicio</a></li> |
-        <li><a href="envie.php">Envie seu texto</a></li> |
-        <li><a href="entrar.php">Login</a></li>
+        <li><a href="textos.php">Textos</a></li> |
+        <li><a href="mensagem.php">Mensagens</a></li>
     </ul>
        
     <div class="corpo"> 
