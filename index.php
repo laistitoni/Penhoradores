@@ -102,7 +102,7 @@ mysqli_close($conn1);
       <ul>
         <li>
   <div class="input-append newsletter-box text-center">
-      <input type="text" class="full text-center" placeholder="Email " name="email-contato">
+      <input type="email" class="full text-center" placeholder="Email " name="email-contato">
       <input type="text" class="full text-center" placeholder="Mensagem " name="mensagem-contato">
   </div>
         </li>

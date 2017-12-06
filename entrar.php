@@ -50,7 +50,7 @@ include 'conn.php';
       <ul>
         <li>
   <div class="input-append newsletter-box text-left">
-     Email: <input type="text" class="full text-center" name="email-cadastro">
+     Email: <input type="email" class="full text-center" name="email-cadastro">
      Nome: <input type="text" class="full text-center" name="nome-cadastro">
      Senha: <input type="password" class="full text-center" name="senha-cadastro">
      <input type="submit"  class="btn  bg-gray pull-left1" value="Cadastrar" name="botao-cadastro">
@@ -66,7 +66,7 @@ include 'conn.php';
       <ul>
         <li>
   <div class="input-append newsletter-box text-left">
-     Email: <input type="text" class="full text-center" name="email-entrar">
+     Email: <input type="email" class="full text-center" name="email-entrar">
      Senha: <input type="password" class="full text-center" name="senha-entrar">
      <input type="submit"  class="btn  bg-gray pull-left1" value="Login" name="botao-entrar">
   </div>
