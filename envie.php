@@ -7,6 +7,7 @@ include 'conn.php';
     header('Location: entrar.php');
 }
 ?>
+
 <html lang="pt-br">
     
 <head>

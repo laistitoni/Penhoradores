@@ -29,6 +29,7 @@ include 'conn.php';
       </ul> 
   </div>
 
+    
   </div>
        <div class="cabeçalho">
   <h1>Penhoradores de Textos</h1>

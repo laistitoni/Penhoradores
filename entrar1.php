@@ -44,6 +44,7 @@ include 'conn.php';
    
         <div id="c1" class="coluna">
  
+            
           </div>
         <div id="c2" class="coluna">
   <form action='formulario.php' method='POST'>

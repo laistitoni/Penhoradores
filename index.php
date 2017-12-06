@@ -100,6 +100,8 @@ mysqli_close($conn1);
       <form  action='formulario.php' method='POST'> 
     <h3> Fale Conosco </h3>
       <ul>
+          
+          
         <li>
   <div class="input-append newsletter-box text-center">
       <input type="email" class="full text-center" placeholder="Email " name="email-contato">

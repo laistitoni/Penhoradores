@@ -28,6 +28,8 @@ include 'conn.php';
         <li><i class="fa fa-cc-paypal"></i></li>
       </ul> 
   </div>
+    
+    
 
   </div>
        <div class="cabeçalho">

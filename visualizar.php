@@ -12,6 +12,7 @@ echo "<script>alert('Agradecemos sua colaboração');</script>";
 header('Location: index.php'); 
 }
 
+
 if (isset($_POST["visualizar"]) ){
 $autor1 = $_POST['autor'];
 $titulo1 = $_POST["titulo"];

@@ -12,7 +12,6 @@ VALUES('".$emailc."','".$nomec."','".$senhac."')";
 $resultc = mysqli_query($conn1, $inserirc);
 header('Location: entrar1.php');
 }
-
 //verifica cadastro
 if (isset($_POST["botao-entrar"]) ){
 $_SESSION['emaile'] = $_POST['email-entrar'];
