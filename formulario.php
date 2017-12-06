@@ -21,6 +21,9 @@ $resultx = mysqli_query($conn1,$x);
 if(mysqli_num_rows($resultx) > 0){  
     $_SESSION['Logado'] = 1;
     header('Location: envie.php');
+}else{
+    echo "<script>alert('oops! algo deu errado, tente novamente');</script>";
+    header('Location: entrar.php');
 }
 
 }
@@ -30,6 +33,9 @@ $emaila = $_POST['email-adm'];
 $senhaa = $_POST["senha-adm"];
 if(($emaila=="leo@gmail.com"||$emaila == "marcelo@gmail.com"||$emaila== "airton@gmail.com" )&&($senhaa=="leo123"||$senhaa== "marcelo123"||$senhaa== "airton123")){    
     header('Location: adm.php');
+}else{
+    echo "<script>alert('oops! algo deu errado, tente novamente');</script>";
+    header('Location: entrar.php');
 }
 }
 
