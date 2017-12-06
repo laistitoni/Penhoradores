@@ -11,7 +11,6 @@ $resultx = mysqli_query($conn1,$x);
 echo "<script>alert('Agradecemos sua colaboração');</script>";
 header('Location: index.php'); 
 }
-
 if (isset($_POST["visualizar"]) ){
 $autor1 = $_POST['autor'];
 $titulo1 = $_POST["titulo"];
@@ -44,38 +43,14 @@ $texto1 = $_POST['texto'];
  <div class="corpo">
      <span>
          <div id="c1" class="coluna">
-             <h2> Textos da semana</h2>
-             <hr>
-             <h4><?php echo $titulo1;?></h4>
-<?php echo "$texto1<br>";?>
+ <h2> Textos</h2>
+ <hr>
+ <?php
+ echo "<h4>$titulo1</h4>$texto1<br> $autor1<br>";
+ ?>
  </div>
          <div id="c2" class="coluna">
-              <h2> Textos mais curtidos</h2>
-               <hr>
-                    <h4>Cadê você?</h4>
-Cadê você aqui na minha cama ?
-Cadê você para me dar segurança ?
-Não está longe, não está perto
-Distante como as areias do deserto
-
-O espaço não se pode medir
-No tempo não se pode interferir
-Não importa a distância e nem o tempo
-Você me completa em todos os momentos
-
-Por vezes, me sinto sem nada
-Uma sensação que me cala
-Depois disso acontecer
-Eu tento aprender
-
-Solitário, eu e meus pensamentos
-Me trazem os meus sentimentos
-Tudo o que eu faço ou tudo que faria
-Só tem um motivo, a sua alegria
-
-Seguro, solitário ou mesmo ninguém
-Não sei o que poderia acontecer
-Se eu não tivesse você
+              
          </div></span>
  </div>
  

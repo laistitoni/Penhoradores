@@ -47,6 +47,7 @@ texto TEXT NOT NULL)";
     }else {
       echo "Error na criação da tabela: ".mysqli_error($conn1);
     }
+    
     $sql4 = "CREATE TABLE IF NOT EXISTS texto_enviado (
 autor VARCHAR(50) NOT NULL,
 titulo TEXT NOT NULL,
